@@ -64,10 +64,13 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* Install Terraform packages
+   ```sh
+   brew tap hashicorp/tap
+   brew install hashicorp/tap/terraform
+   brew update
+   brew upgrade hashicorp/tap/terraform
+   ```
 
 ### Installation
 
@@ -75,23 +78,16 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/Jonny-Hein/microservices-jonny.git
    ```
-2. Install Terraform packages
-   ```sh
-   brew tap hashicorp/tap
-   brew install hashicorp/tap/terraform
-   brew update
-   brew upgrade hashicorp/tap/terraform
-   ```
-3. Navigate to desired template in templates/*
-4. Run 
+2. Navigate to desired template in templates/*
+3. Run 
   ```sh
   terraform apply
   ```
-5. Fill in the required input fields
+4. Fill in the required input fields
   a. org name (i.e. Addepar)
   b. repo name (i.e. new-repo)
   c. github token 
-6. Done!
+5. Done!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
