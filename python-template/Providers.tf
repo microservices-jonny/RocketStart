@@ -1,12 +1,28 @@
-resource "github_repository" "github-repo-1" {
-  name        = var.repo_name
-  description = "Repo made by RocketStart"
+variable "github_token" {
+  type = string
+}
+variable "visibility" {
+  type = string
+}
+variable "repo_name" {
+  type = string
+}
+variable "org_name" {
+  type = string
+}
 
-  visibility = var.visibility
-
-  template {
-    owner                = "rochacbruno"
-    repository           = "python-project-template"
-    include_all_branches = false
+terraform {
+  required_providers {
+    github = {
+      source  = "integrations/github"
+      version = "~> 5.0"
+    }
   }
+}
+
+# Configure the GitHub Provider
+
+provider "github" {
+  token = var.github_token
+  owner = var.org_name
 }
