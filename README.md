@@ -81,6 +81,7 @@ This is an example of how to list things you need to use the software and how to
 2. Navigate to desired template in templates/*
 3. Run 
   ```sh
+  terraform init
   terraform apply
   ```
 4. Fill in the required input fields
